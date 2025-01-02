@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #001a57;
+  color: white;
+  font-family: "Merriweather", serif;
+  height: 10vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+main {
+  margin-top: 10vh;
+  display: flex;
+  flex-grow: 1;
+  font-family: "Crimson Pro", serif;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #001a57;
+  color: white;
+  font-family: "Merriweather", serif;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+.nav-item:hover,
+.navbar-toggler:hover,
+.navbar-brand:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
