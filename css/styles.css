@@ -16,6 +16,21 @@ body {
   min-height: 100vh;
 }
 
+body.dark-mode {
+  background-color: #212121;
+  color: #d4d4d4;
+}
+
+body.dark-mode header {
+  background-color: #001a57; /* Azul oscuro para el header */
+  color: #e0e0e0;
+}
+
+body.dark-mode footer {
+  background-color: #001a57; /* Azul oscuro para el footer */
+  color: #e0e0e0;
+}
+
 header {
   background-color: #001a57;
   color: white;
@@ -58,6 +73,10 @@ footer {
   font-weight: bold;
 }
 
+.intro {
+  animation-delay: 0s;
+}
+
 /* Estilos de la barra de navegación */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -79,6 +98,70 @@ footer {
   transform: scale(1.1);
 }
 
+/* Estilos para el switch de tema */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0d6efd;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Iconos de la luna y el sol */
+#themeIcon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode #themeIcon {
+  transform: rotate(180deg);
+}
+
 /* Estilos de la página principal */
 main.container {
   animation: slideUp 1.5s ease-out;
@@ -90,8 +173,14 @@ main.container {
   margin-block: 20px;
   margin-inline: 10px;
   border-radius: 10px;
-  animation: popIn 1.5s ease-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: popIn 1.5s ease-out;
+}
+
+.images img:hover,
+.images.intro-box:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
 }
 
 .images {
@@ -114,6 +203,17 @@ main.container {
   margin-inline: 10px;
   font-family: "Crimson Pro", serif;
   font-size: 1.1rem;
+}
+
+body.dark-mode .intro-box {
+  background-color: #171717;
+  border: 1px solid rgb(5, 5, 5);
+  color: #d4d4d4;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .images img {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .intro-box h2 {
@@ -148,10 +248,38 @@ iframe {
   border: 2px solid #4caf50;
 }
 
+input:focus,
+textarea:focus {
+  border: 1px solid #001a57;
+  outline: none;
+}
+
 .btn-primary {
   background-color: #001a57;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #555555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #0d6efd;
+  outline: none;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #001a57;
+  font-weight: bold;
+  color: #e0e0e0;
+  border: 1px solid #001636;
 }
 
 /* Fuentes */
@@ -188,4 +316,27 @@ iframe {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transición suave de fondo y color de texto */
+}
+
+/* Añadir transición a las tarjetas */
+.intro-box {
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transición suave para tarjetas */
+}
+
+/* Transición para enlaces */
+.nav-link.text-white {
+  transition: color 0.5s ease; /* Transición suave para color de enlaces */
+}
+
+/* Añadir transición para el header y footer */
+header, footer {
+  transition: background-color 0.5s ease; /* Transición suave para el fondo */
+}
+
+input, textarea, button {
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
