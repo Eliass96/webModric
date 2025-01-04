@@ -22,12 +22,12 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-  background-color: #001a57; /* Azul oscuro para el header */
+  background-color: #001a57;
   color: #e0e0e0;
 }
 
 body.dark-mode footer {
-  background-color: #001a57; /* Azul oscuro para el footer */
+  background-color: #001a57;
   color: #e0e0e0;
 }
 
@@ -89,6 +89,12 @@ footer {
 
 .nav-item {
   font-size: 1rem;
+}
+
+.nav-item,
+.navbar-toggler,
+.navbar-brand {
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-item:hover,
@@ -154,7 +160,7 @@ input:checked + .slider:before {
 /* Iconos de la luna y el sol */
 #themeIcon {
   font-size: 1.5rem;
-  margin-left: 10px;
+  margin-right: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -177,8 +183,13 @@ main.container {
   animation: popIn 1.5s ease-out;
 }
 
+.images img,
+.images .intro-box {
+  transition: all 0.3s ease-in-out;
+}
+
 .images img:hover,
-.images.intro-box:hover {
+.images .intro-box:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
@@ -229,6 +240,37 @@ iframe {
   height: 650;
 }
 
+body.dark-mode .tl-timeline {
+  background-color: #121212 !important; /* Fondo oscuro */
+  color: #ffffff !important; /* Texto claro */
+}
+
+body.dark-mode .tl-slide {
+  background-color: #1e1e1e !important; /* Fondo de las diapositivas */
+  color: #e0e0e0 !important; /* Texto claro */
+}
+
+body.dark-mode .tl-text-content {
+  background-color: #222222 !important; /* Fondo oscuro */
+  color: #ffffff !important; /* Texto claro */
+  border-color: #333333 !important; /* Bordes */
+}
+
+body.dark-mode .tl-media {
+  background-color: #000000 !important; /* Fondo de medios */
+  border-color: #444444 !important; /* Bordes */
+}
+
+body.dark-mode .tl-time {
+  background-color: #333333 !important; /* Fondo oscuro */
+  color: #e0e0e0 !important; /* Texto claro */
+}
+
+body.dark-mode .tl-controls {
+  background-color: #333333 !important; /* Fondo oscuro */
+  color: #e0e0e0 !important; /* Texto claro */
+}
+
 /* Estilos de la página de contacto */
 .form-label {
   font-weight: bold;
@@ -257,6 +299,12 @@ textarea:focus {
 .btn-primary {
   background-color: #001a57;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover,
+body.dark-mode .btn-primary:hover {
+  background-color: #0d6efd;
   transition: all 0.3s ease-in-out;
 }
 
@@ -333,10 +381,13 @@ body {
 }
 
 /* Añadir transición para el header y footer */
-header, footer {
+header,
+footer {
   transition: background-color 0.5s ease; /* Transición suave para el fondo */
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
