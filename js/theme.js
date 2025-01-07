@@ -14,11 +14,11 @@ if (localStorage.getItem("theme") === "dark") {
 themeToggle.addEventListener("change", () => {
   if (themeToggle.checked) {
     document.body.classList.add("dark-mode");
-    themeIcon.classList.replace("bi-moon", "bi-sun");
+    themeIcon.classList.replace("bi-sun", "bi-moon");
     localStorage.setItem("theme", "dark");
   } else {
     document.body.classList.remove("dark-mode");
-    themeIcon.classList.replace("bi-sun", "bi-moon");
+    themeIcon.classList.replace("bi-moon", "bi-sun");
     localStorage.setItem("theme", "light");
   }
 });
