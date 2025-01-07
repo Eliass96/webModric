@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "swiper": "^11.2.0",
     "timelinejs": "^2.35.6",
     "timelinejs-slider": "^0.1.0"
   }

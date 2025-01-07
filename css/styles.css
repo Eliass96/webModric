@@ -271,6 +271,48 @@ body.dark-mode .tl-controls {
   color: #e0e0e0 !important; /* Texto claro */
 }
 
+/* Estilos de la galería */
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+  max-width: 90%;
+  max-height: 60vh;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.swiper-slide img:hover,
+.swiper-slide video:hover {
+  transform: scale(1.05);
+}
+
+.swiper-slide img,
+.swiper-slide video {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .swiper-slide img,
+body.dark-mode .swiper-slide video {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 1rem;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0,0,0);
+  z-index: 10;
+}
+
 /* Estilos de la página de contacto */
 .form-label {
   font-weight: bold;
