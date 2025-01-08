@@ -241,49 +241,10 @@ body.dark-mode .images img {
 /* Estilos de la página de biografía */
 iframe {
   width: 100%;
-  height: 67.2vh;
+  height: 650px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-bottom: 20px;
-}
-
-body.dark-mode iframe {
-  width: 100%;
-  height: 67.2vh;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-body.dark-mode .tl-timeline {
-  background-color: #121212 !important; /* Fondo oscuro */
-  color: #ffffff !important; /* Texto claro */
-}
-
-body.dark-mode .tl-slide {
-  background-color: #1e1e1e !important; /* Fondo de las diapositivas */
-  color: #e0e0e0 !important; /* Texto claro */
-}
-
-body.dark-mode .tl-text-content {
-  background-color: #222222 !important; /* Fondo oscuro */
-  color: #ffffff !important; /* Texto claro */
-  border-color: #333333 !important; /* Bordes */
-}
-
-body.dark-mode .tl-media {
-  background-color: #000000 !important; /* Fondo de medios */
-  border-color: #444444 !important; /* Bordes */
-}
-
-body.dark-mode .tl-time {
-  background-color: #333333 !important; /* Fondo oscuro */
-  color: #e0e0e0 !important; /* Texto claro */
-}
-
-body.dark-mode .tl-controls {
-  background-color: #333333 !important; /* Fondo oscuro */
-  color: #e0e0e0 !important; /* Texto claro */
 }
 
 /* Estilos de la galería */
@@ -469,6 +430,14 @@ blockquote {
   margin-bottom: 20px;
   text-align: center;
   font-family: "Merriweather", serif;
+}
+
+.blockquote-footer {
+  color: white;
+}
+
+body.dark-mode .blockquote-footer {
+  color: #d4d4d4;
 }
 
 /* Estilos del juego */
