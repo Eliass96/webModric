@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".swiper-button-prev",
       },
       autoplay: {
-        delay: 5000
+        delay: 5000,
+        disableOnInteraction: true,
       },
       effect: "coverflow",
       coverflowEffect: {
