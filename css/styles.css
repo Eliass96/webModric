@@ -324,8 +324,8 @@ body.dark-mode .swiper-slide iframe {
   position: relative !important;
   margin-top: 1rem;
   text-align: center;
-  transition: .3s opacity;
-  transform: translate3d(0,0,0);
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
   z-index: 10;
 }
 
@@ -452,6 +452,7 @@ body.dark-mode .btn-primary {
   margin-top: 50px;
   padding: 30px;
   border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 body.dark-mode #quoteSection {
@@ -468,6 +469,73 @@ blockquote {
   margin-bottom: 20px;
   text-align: center;
   font-family: "Merriweather", serif;
+}
+
+/* Estilos del juego */
+#quizSection {
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(241, 241, 241);
+}
+
+body.dark-mode #quizSection {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  background-color: #171717;
+  color: #d4d4d4;
+  border: 1px solid rgb(5, 5, 5);
+}
+
+#question {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+
+#answers button {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-width: 2px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+#answers button.correct {
+  background-color: #28a745 !important;
+  color: white;
+  border-color: #218838;
+}
+
+#answers button.incorrect {
+  background-color: #dc3545 !important;
+  color: white;
+  border-color: #bd2130;
+}
+
+#answers button:hover {
+  transform: scale(1.05);
+}
+
+#answers button:active {
+  transform: scale(0.98);
+}
+
+#answers button.correct {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+#answers button.incorrect {
+  background-color: #dc3545 !important;
+  color: white;
 }
 
 /* Fuentes */

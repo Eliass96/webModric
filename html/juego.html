@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -13,14 +14,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/juego.css" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand text-white" href="../index.html"
-            >Luka Modrić</a
-          >
+          <a class="navbar-brand text-white" href="../index.html">Luka Modrić</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -32,9 +32,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-white" href="biografia.html"
-                  >Biografía</a
-                >
+                <a class="nav-link text-white" href="biografia.html">Biografía</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="logros.html">Logros</a>
@@ -46,14 +44,10 @@
                 <a class="nav-link text-white" href="contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="frases.html"
-                  >Frases famosas</a
-                >
+                <a class="nav-link text-white" href="frases.html">Frases famosas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="juego.html"
-                  >¡Aprende jugando!</a
-                >
+                <a class="nav-link text-white" href="juego.html">¡Aprende jugando!</a>
               </li>
             </ul>
           </div>
@@ -69,13 +63,22 @@
     </header>
 
     <main class="container ps-5 pe-5 pt-4 pb-8">
-
+      <section id="quizSection" class="text-center">
+        <div id="questionContainer" class="p-4">
+          <h2 id="question" class="mb-4"></h2>
+          <div id="answers" class="d-flex flex-column"></div>
+        </div>
+        <button id="nextButton" class="btn btn-primary mt-3" disabled>
+          Siguiente
+        </button>
+      </section>
     </main>
 
     <footer class="text-center py-3">
       <p>&copy; 2025 Luka Modrić - Elías Botía García 2ºDAW</p>
     </footer>
     <script src="../js/theme.js"></script>
+    <script src="../js/juego.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
