@@ -1,3 +1,5 @@
+const mensajes = [];
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -12,6 +14,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     background: isDarkTheme ? "#343a40" : "#fff",
     color: isDarkTheme ? "#fff" : "#000",
   }).then(() => {
-    e.target.submit();
+    mensajes.push({
+      nombre: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      mensaje: document.getElementById("message").value,
+    });
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    console.table(mensajes);
   });
 });
