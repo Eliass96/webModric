@@ -16,7 +16,7 @@ const questions = [
       correct: 2,
     },
     {
-      question: "¿Cuántas veces ha ganado la Champions League con el Real Madrid?",
+      question: "¿Cuántas veces ha ganado la Champions League con el Real Madrid (en Enero de 2025)?",
       answers: ["4", "5", "6"],
       correct: 2,
     },
