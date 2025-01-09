@@ -1,3 +1,7 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+
 /* Reset */
 * {
   margin: 0;
@@ -506,10 +510,6 @@ body.dark-mode #quizSection {
   background-color: #dc3545 !important;
   color: white;
 }
-
-/* Fuentes */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
 
 /* Animaciones */
 @keyframes fadeIn {
